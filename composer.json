@@ -1,0 +1,21 @@
+{
+    "name": "gatumbac/bienes-raices-backend",
+    "description": "Backend del proyecto de bienes raices con POO y PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gatumbac",
+            "email": "gatumbac@espol.edu.ec"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.11"
+    }
+}

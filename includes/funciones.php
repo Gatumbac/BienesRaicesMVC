@@ -36,12 +36,6 @@ function verificarVariable($variable, $header) {
     }
 }
 
-function validarTipo($tipo) {
-    $tipos = ['vendedor', 'propiedad'];
-    $tipoValido = in_array($tipo, $tipos);
-    verificarExistencia($tipoValido);
-}
-
 function getMensaje($resultado) {
     $resultados = [
         '0' => 'Error al ejecutar la operación',

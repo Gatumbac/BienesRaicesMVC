@@ -14,6 +14,8 @@
             <a href="/propiedades/crear" class="boton-verde">Nueva Propiedad</a>
             <a href="/vendedores/crear" class="boton-amarilloR">Nuevo Vendedor</a>
             <a href="#vendedoresIndice" class="boton-verde">Ver Vendedores</a>
+            <a href="/admin-blog" class="boton-azulR">Administrar Blog</a>
+
         </div>
         
         <h2 id="propiedadesIndice">Propiedades</h2>

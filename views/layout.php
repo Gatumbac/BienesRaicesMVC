@@ -3,7 +3,9 @@
         session_start();
     }
     $auth = $_SESSION['login'] ?? false;
-    $inicio = false;
+    if (!isset($inicio)) {
+        $inicio = false;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +24,7 @@
     <header class="header <?php echo $inicio ? 'inicio': ''; ?> ">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="<?php echo $auth ? '/admin' : '/index.php' ?>">
+                <a href="<?php echo $auth ? '/admin' : '/' ?>">
                     <img src="/build/img/logotipos/logo.svg" alt="Logotipo">
                 </a>
                 <div class="mobile-menu">
@@ -32,12 +34,12 @@
                 <div class="nav-dark-mode">
                     <img class="icon-dark-mode" src="/build/img/logotipos/dark-mode.svg" alt="dark mode">
                     <nav class="navegacion">
-                        <a class="navegacion__enlace" href="/nosotros.php">Nosotros</a>
-                        <a class="navegacion__enlace" href="/anuncios.php">Anuncios</a>
-                        <a class="navegacion__enlace" href="/blog.php">Blog</a>
-                        <a class="navegacion__enlace" href="/contacto.php">Contacto</a>
+                        <a class="navegacion__enlace" href="/nosotros">Nosotros</a>
+                        <a class="navegacion__enlace" href="/propiedades">Anuncios</a>
+                        <a class="navegacion__enlace" href="/blog">Blog</a>
+                        <a class="navegacion__enlace" href="/contacto">Contacto</a>
                         <?php if($auth) { ?>
-                            <a href="/cerrar-sesion.php">Cerrar Sesión</a>
+                            <a href="/cerrar-sesion">Cerrar Sesión</a>
                         <?php } ?>
                     </nav>
                 </div>
@@ -53,10 +55,10 @@
     <footer class="footer">
         <div class="contenedor  contenido-footer">
             <nav class="navegacion mostrar">
-                <a class="navegacion__enlace" href="/nosotros.php">Nosotros</a>
-                <a class="navegacion__enlace" href="/anuncios.php">Anuncios</a>
-                <a class="navegacion__enlace" href="/blog.php">Blog</a>
-                <a class="navegacion__enlace" href="/contacto.php">Contacto</a>
+                <a class="navegacion__enlace" href="/nosotros">Nosotros</a>
+                <a class="navegacion__enlace" href="/propiedades">Anuncios</a>
+                <a class="navegacion__enlace" href="/blog">Blog</a>
+                <a class="navegacion__enlace" href="/contacto">Contacto</a>
             </nav>
             <p>Todos los derechos reservados <?php echo date('Y'); ?> &copy</p>
         </div>

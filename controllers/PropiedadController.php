@@ -36,6 +36,8 @@ class PropiedadController {
             if (empty($errores)) {
                 ImagenHandler::procesarImagen($_FILES["imagen"], $propiedad->getImagen());
                 $propiedad->guardar();
+            } else {
+                $propiedad->setImagen('');
             }
         }
 

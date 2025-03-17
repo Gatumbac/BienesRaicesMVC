@@ -68,6 +68,9 @@ abstract class ActiveRecord {
         $sanitizados = [];
 
         foreach ($atributos as $columna => $valor) {
+            if (is_string($valor)) {
+                $valor = trim($valor);
+            }
             $sanitizados[$columna] = self::$db->escape_string($valor);
         }
 
@@ -86,8 +89,8 @@ abstract class ActiveRecord {
         return $array;
     }
 
-    public static function take($cantidad) {
-        $query = "SELECT * FROM " . static::$tabla . " LIMIT {$cantidad}";
+    public static function take($cantidad, $order) {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY id {$order} LIMIT {$cantidad}";
         $array = static::consultarTabla($query);
         return $array;
     }

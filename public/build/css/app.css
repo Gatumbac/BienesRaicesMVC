@@ -462,6 +462,28 @@ h4 {
   }
 }
 
+.boton-azulR {
+  width: 100%;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+  border: none;
+  margin: 1rem 0;
+}
+.boton-azulR:hover {
+  background-color: rgb(20.7142857143, 84.9285714286, 225.7857142857);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .boton-azulR {
+    width: auto;
+    display: inline-block;
+  }
+}
+
 .boton-rojo {
   padding: 1rem 3rem;
   font-size: 2rem;
@@ -523,7 +545,7 @@ h4 {
   padding: 1rem 0 3rem 0;
 }
 .header.inicio {
-  background-image: url(../img/full/header.webp);
+  background-image: url(/build/img/propiedades/header.webp);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -768,7 +790,7 @@ h4 {
 }
 
 .contacto {
-  background-image: url("../img/full/encuentra.webp");
+  background-image: url("/build/img/propiedades/encuentra.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -897,10 +919,8 @@ h4 {
 .form textarea {
   height: 10rem;
 }
-@media (min-width: 768px) {
-  .form textarea {
-    height: 20rem;
-  }
+.form .contenido-blog {
+  height: 30rem;
 }
 .form .forma-contacto {
   max-width: 30rem;

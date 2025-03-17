@@ -34,10 +34,11 @@
 
     textarea {
         height: 10rem;
-        @include m.tablet {
-            height: 20rem;
-        }
     }
+
+    .contenido-blog {
+        height: 30rem;
+    }    
 
     .forma-contacto {
         max-width: 30rem;
@@ -55,3 +56,4 @@
         margin: 2rem 0;
     }
 }
+

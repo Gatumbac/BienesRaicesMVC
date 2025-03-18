@@ -7,6 +7,7 @@ use Controllers\VendedorController;
 use Controllers\PaginasController;
 use Controllers\BlogController;
 use Controllers\BloggerController;
+use Controllers\LoginController;
 
 $router = new Router();
 
@@ -46,5 +47,11 @@ $router->get('/blog', [PaginasController::class, 'blog']);
 $router->get('/entrada', [PaginasController::class, 'entrada']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
 $router->post('/contacto', [PaginasController::class, 'contacto']);
+
+//Login
+$router->get('/login', [LoginController::class, 'mostrarLogin']);
+$router->post('/login', [LoginController::class, 'autenticar']);
+$router->get('/logout', [LoginController::class, 'logout']);
+
 
 $router->comprobarRutas();

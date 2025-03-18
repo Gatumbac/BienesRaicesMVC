@@ -51,7 +51,7 @@ class BloggerController {
         ]);
     }
 
-    public static function eliminar(Router $router) {
+    public static function eliminar() {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = $_POST['id'] ?? '';
             $id = filter_var($id, FILTER_VALIDATE_INT);

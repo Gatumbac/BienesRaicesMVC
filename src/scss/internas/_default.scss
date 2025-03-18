@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+
+.error-404 {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: v.$separacion 0;
+    
+    .error-titulo {
+        font-size: 4rem;
+        font-weight: v.$bold;
+        color: v.$verde;
+        margin-bottom: 1rem;
+    }
+    
+    .error-descripcion {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+}

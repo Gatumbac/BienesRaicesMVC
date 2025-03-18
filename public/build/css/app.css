@@ -1041,4 +1041,24 @@ h4 {
     justify-content: center;
     gap: 2rem;
   }
+}
+
+.error-404 {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 0;
+}
+.error-404 .error-titulo {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #71B100;
+  margin-bottom: 1rem;
+}
+.error-404 .error-descripcion {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=app.css.map */
